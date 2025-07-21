@@ -2,55 +2,152 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Seu Nome - Automação e Tecnologia</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rian Lucas - Automação e Tecnologia</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      background: #f4f4f4;
-      color: #333;
+      font-family: 'Montserrat', sans-serif;
+      background-color: #121212;
+      color: #e0e0e0;
+      line-height: 1.6;
     }
 
     header {
-      background: #222;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
+      background-color: #1f1f1f;
+      padding: 20px 40px;
+      box-shadow: 0 2px 8px rgba(0, 188, 212, 0.3);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
     }
 
-    section {
-      padding: 40px;
-      max-width: 800px;
-      margin: auto;
-      background: #fff;
-      margin-top: 20px;
+    header h1 {
+      font-weight: 600;
+      color: #00bcd4;
+      margin: 0;
+    }
+
+    header p {
+      color: #e0e0e0;
+      font-weight: 400;
+      margin: 0;
+    }
+
+    nav a {
+      color: #e0e0e0;
+      text-decoration: none;
+      margin-left: 25px;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #00bcd4;
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    section.card {
+      background-color: #1e1e1e;
       border-radius: 10px;
+      padding: 25px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 15px rgba(0, 188, 212, 0.15);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    section.card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 30px rgba(0, 188, 212, 0.3);
     }
 
     h2 {
-      color: #444;
+      color: #00bcd4;
+      margin-top: 0;
+    }
+
+    p, ul, label {
+      font-weight: 400;
+      color: #e0e0e0;
     }
 
     ul {
       padding-left: 20px;
     }
 
-    .contato {
-      text-align: center;
-      margin-top: 30px;
+    ul li {
+      margin-bottom: 10px;
     }
 
-    .contato a {
-      text-decoration: none;
-      background: #007bff;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 5px;
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-width: 500px;
+      margin-top: 20px;
     }
 
-    .contato a:hover {
-      background: #0056b3;
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      padding: 10px;
+      border-radius: 6px;
+      border: none;
+      font-size: 1rem;
+      font-family: 'Montserrat', sans-serif;
+      resize: vertical;
+    }
+
+    textarea {
+      min-height: 100px;
+    }
+
+    button {
+      width: max-content;
+      background-color: #00bcd4;
+      border: none;
+      padding: 12px 28px;
+      border-radius: 6px;
+      color: #121212;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0, 188, 212, 0.4);
+      align-self: flex-start;
+    }
+
+    button:hover {
+      background-color: #0097a7;
+      box-shadow: 0 6px 18px rgba(0, 151, 167, 0.6);
+    }
+
+    /* Responsividade simples */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+      nav a {
+        margin: 15px 10px 0 10px;
+      }
+      main {
+        margin: 20px auto;
+      }
+      form {
+        max-width: 100%;
+      }
+      button {
+        width: 100%;
+        text-align: center;
+      }
     }
   </style>
 </head>
@@ -60,40 +157,37 @@
     <p>Automação, programação e soluções sob medida</p>
   </header>
 
-  <section>
-    <h2>Sobre Mim</h2>
-    <p>Olá! Meu nome é Rian Lucas, sou programador e entusiasta de automações. 
-    Gosto de resolver problemas com código, criando soluções que economizam tempo e evitam trabalhos manuais.</p>
-  </section>
+  <main>
+    <section class="card">
+      <h2>Sobre Mim</h2>
+      <p>Olá! Meu nome é Rian Lucas, sou programador e entusiasta de automações. Gosto de resolver problemas com código, criando soluções que economizam tempo e evitam trabalhos manuais.</p>
+    </section>
 
-  <section>
-    <h2>Como posso te ajudar?</h2>
-    <ul>
-      <li>Automatizar tarefas repetitivas (como planilhas, relatórios, etc.)</li>
-      <li>Criar bots e scripts personalizados</li>
-      <li>Montar sistemas simples para controle e organização</li>
-      <li>Otimizar fluxos de trabalho</li>
-    </ul>
-  </section>
+    <section class="card">
+      <h2>Como posso te ajudar?</h2>
+      <ul>
+        <li>Automatizar tarefas repetitivas (como planilhas, relatórios, etc.)</li>
+        <li>Criar bots e scripts personalizados</li>
+        <li>Montar sistemas simples para controle e organização</li>
+        <li>Otimizar fluxos de trabalho</li>
+      </ul>
+    </section>
 
-  <section>
-    <h2>Vamos conversar?</h2>
-    <div class="contato">
-      <p>Se quiser minha ajuda, é só clicar abaixo:</p>
+    <section class="card">
+      <h2>Vamos conversar?</h2>
       <form action="https://formspree.io/f/meozeyyq" method="POST">
-      <label for="nome">Nome:</label>
-      <input type="text" id="nome" name="nome" required>
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required />
 
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="_replyto" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="_replyto" required />
 
-      <label for="mensagem">Mensagem:</label>
-      <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+        <label for="mensagem">Mensagem:</label>
+        <textarea id="mensagem" name="mensagem" required></textarea>
 
-      <button type="submit">Enviar</button>
-    </form>
-  </section>
-
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
 </body>
 </html>
-<!-- Trigger rebuild -->
